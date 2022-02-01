@@ -28,6 +28,8 @@ dependencies:
   firebase_storage: 10.2.6
   flutter:
     sdk: flutter
+  flutter_svg: ^0.22.0
+  image_picker: ^0.8.4+5
 
 dev_dependencies:
   flutter_test:
@@ -48,8 +50,8 @@ flutter:
         - asset: assets/fonts/FontsFree-Net-Billabong.ttf
           style: italic
           weight: 700
-  # fonts:
-  #   - family: Schyler
+  assets:
+    - assets/Images/instagram.svg
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
