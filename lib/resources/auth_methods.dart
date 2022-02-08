@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:insta_clone/resources/storage_method.dart';
 
 class AuthMethods {
@@ -34,6 +35,25 @@ class AuthMethods {
         'photoUrl': photoURL
       });
       res = "Success";
+    } catch (e) {
+      res = e.toString();
+    }
+
+    return res;
+  }
+
+// Login Auth
+  Future<String> loginUser(
+      {required String email, required String password}) async {
+    String res = "Some error occurred";
+    try {
+      if (email.isNotEmpty || password.isNotEmpty) {
+        await _auth.signInWithEmailAndPassword(
+            email: email, password: password);
+        res = "Success";
+      } else {
+        res = "Please enter all the details";
+      }
     } catch (e) {
       res = e.toString();
     }
