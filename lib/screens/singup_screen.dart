@@ -36,8 +36,8 @@ class _SignupScreenState extends State<SignupScreen> {
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
-    _bioController.dispose();
-    _usernameController.dispose();
+    //  _bioController.dispose();
+    //   _usernameController.dispose();
   }
 
   void selectImage() async {
